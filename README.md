@@ -439,14 +439,14 @@ kubectl port-forward svc/argocd-server -n argocd 8081:443
 
 ## 🔗 Links
 
-- **GitHub Repo:** https://github.com/omjaju18/Full_Stack_Devops_Project
-- **Docker Hub:** https://hub.docker.com/repository/docker/omjaju18/ipl-voter/
+- **GitHub Repo:** https://github.com/avikal06/ipl-voter-devops.git
+- **Docker Hub:** 
 
 ---
 
 ## 👨‍💻 Author
 
-**Om Jaju** — Building in public, one DevOps tool at a time.
+**Avikal Sinhs - One Devops tool at a time
 
 ---
 

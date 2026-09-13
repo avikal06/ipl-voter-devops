@@ -43,8 +43,8 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -55,8 +55,8 @@ jobs:
           context: ./app
           push: true
           tags: |
-            omjaju18/ipl-voter:latest
-            omjaju18/ipl-voter:${{ github.sha }}
+            avikal06/ipl-voter:latest
+            avikal06/ipl-voter:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -68,7 +68,7 @@ jobs:
       - name: Run Trivy vulnerability scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: omjaju18/ipl-voter:${{ github.sha }}
+          image-ref: avikal06/ipl-voter:${{ github.sha }}
           format: table
           exit-code: 0
           severity: CRITICAL,HIGH
@@ -110,8 +110,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "omjaju18"
-          git config --global user.email "omjaju03@gmail.com"
+          git config --global user.name "avikal06"
+          git config --global user.email "avikal06@users.noreply.github.com"
           git add k8/helm/ipl-voter/values.yaml
           git commit -m "chore(cd): update image tag to ${{ github.sha }}"
           git push origin HEAD:${{ github.ref }}
