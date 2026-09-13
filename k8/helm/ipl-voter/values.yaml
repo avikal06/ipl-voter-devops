@@ -1,5 +1,5 @@
 image:
-  repository: omjaju18/ipl-voter
+  repository: avikal06/ipl-voter
   tag: "32a41f2bb06d13465ba501280436fc12b16e68b9"
   pullPolicy: IfNotPresent
 

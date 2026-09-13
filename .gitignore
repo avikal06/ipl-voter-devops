@@ -4,5 +4,5 @@ __pycache__/
 venv/
 *.egg-info/
 .DS_Store
-
+app/votes.db
 k8/monitoring/alertmanager-email-secret.yaml
