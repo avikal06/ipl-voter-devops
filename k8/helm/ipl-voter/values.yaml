@@ -1,6 +1,6 @@
 image:
   repository: avikal06/ipl-voter
-  tag: "32a41f2bb06d13465ba501280436fc12b16e68b9"
+  tag: "0672dbc189a637a85e5460edef63f332bb265d36"
   pullPolicy: IfNotPresent
 
 replicaCount: 1
